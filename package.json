@@ -25,6 +25,7 @@
     "core-js": "^2.4.1",
     "moment": "^2.22.2",
     "ng-recaptcha": "^4.2.1",
+    "ngx-sbz-type-delete": "^2.0.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

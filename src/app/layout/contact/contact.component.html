@@ -1,0 +1,30 @@
+<div id="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <h1>Contact Us</h1>
+    <div [ngClass]="{'error': contactForm.controls['name'].errors && contactForm.controls['name'].touched}">
+      <input class="textbox" type="text" formControlName="name" placeholder="Name..." required>
+      <div *ngIf="contactForm.controls['name'].errors && contactForm.controls['name'].touched" class="error-msg">
+        <div [hidden]="!contactForm.controls['name'].errors.required">Name is required.</div>
+      </div>
+    </div>
+    <div [ngClass]="{'error': contactForm.controls['email'].errors && contactForm.controls['email'].touched}">
+      <input class="textbox" type="text" formControlName="email" placeholder="Email..." required>
+      <div *ngIf="contactForm.controls['email'].errors && contactForm.controls['email'].touched" class="error-msg">
+        <div [hidden]="!contactForm.controls['email'].errors.required">Email is required.</div>
+      </div>
+    </div>
+    <div [ngClass]="{'error': contactForm.controls['message'].errors && contactForm.controls['message'].touched}">
+      <textarea rows="4" class="textbox" type="text" formControlName="message" placeholder="Enter text..." required></textarea>
+      <div *ngIf="contactForm.controls['message'].errors && contactForm.controls['message'].touched" class="error-msg">
+        <div [hidden]="!contactForm.controls['message'].errors.required">Enter a message</div>
+      </div>
+    </div>
+    <label>
+      Add to Newsletter:
+      <input type="checkbox" formControlName="shouldAddToNewsletter">
+    </label>
+    <div>
+      <button [ngClass]="{'enable': contactForm.valid, 'disable': contactForm.invalid}" type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>

@@ -10,7 +10,7 @@ Your challenge is to create contact form using Reactive Forms in Angular 5.
 
 ## Challenge
 1. Create a new route at `/contact` that will lazy load a new component called `ContactComponent` (see other route examples)
-   
+
 2. Add a reactive form to the ContactComponent with the following controls:
     - `name` - string, required
     - `email` - string, required
@@ -25,5 +25,5 @@ Your challenge is to create contact form using Reactive Forms in Angular 5.
 - Create a service to handle API request/response
 - Create reusable components (ie. `TextFieldComponent` and `CheckboxComponent`)
 
-## Completion 
+## Completion
 - send a link to your repo to George
